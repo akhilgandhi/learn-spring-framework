@@ -1,11 +1,9 @@
 package com.in28minutes.learnspringframework;
 
 import com.in28minutes.learnspringframework.game.GameRunner;
-import com.in28minutes.learnspringframework.game.MarioGame;
 import com.in28minutes.learnspringframework.game.PacMan;
-import com.in28minutes.learnspringframework.game.SuperContraGame;
 
-public class AppGamingBasicJava {
+public class App01GamingBasicJava {
 
     public static void main(String[] args) {
 
@@ -19,8 +17,9 @@ public class AppGamingBasicJava {
          */
 //        var game = new MarioGame();
 //        var game = new SuperContraGame();
-        var game = new PacMan();
-        var gameRunner = new GameRunner(game);
+        var game = new PacMan();                // 1: Object creation
+        var gameRunner = new GameRunner(game);  // 2: Object creation + wiring dependencies
+                                                // Game is a dependency of GameRunner
         gameRunner.run();
     }
 }
